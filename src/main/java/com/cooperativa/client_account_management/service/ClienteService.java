@@ -14,4 +14,12 @@ public class ClienteService {
     ClienteRepository repository;
 
 
+    public ClienteModel agregar(ClienteModel cliente){
+        try {return repository.save(cliente);}catch (Exception e){return null;}
+    }
+    public ClienteModel consultar(String nit) {
+        try {return repository.getCliente(nit);}catch (Exception e){return null;}
+    }
+
+
 }
